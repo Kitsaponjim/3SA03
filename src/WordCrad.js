@@ -38,6 +38,12 @@ export default function WordCrad(props) {
         setIsActive(val);
     }
 
+    const reset = () => {
+        setState({ ...state, guess: "", attempt: state.attempt + 1 });
+        setCount(0)
+        setResults("")
+      }
+
     const activationHandler = c =>{ 
         console.log(`${c} has been activated.`)
             let guess = state.guess + c
@@ -66,14 +72,15 @@ export default function WordCrad(props) {
             <>
                 <div>{results}</div>
                 <div>Time is {count} seconds</div>
+                <button onClick={reset}>RESET</button>
             </>
         )}
+                <div>
+                    {state.chars.map((c, i) =><CharacterCard value={c} key={i} activationHandler={activationHandler} attempt={state.attempt}/>)}
+                </div>
         <h3>
             {count} Second
         </h3>
-        <div>
-            {state.chars.map((c, i) =><CharacterCard value={c} key={i} activationHandler={activationHandler} attempt={state.attempt}/>)}
-        </div>
         </>
     )
 }
