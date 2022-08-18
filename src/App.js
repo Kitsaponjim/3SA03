@@ -4,7 +4,7 @@ import './App.css';
 import CharacterCard from './CharacterCard';
 import WordCrad from './WordCrad';
 
-const word = "Hello";
+const word = "youtube";
 function App() {
   return (
     <div>
