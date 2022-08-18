@@ -55,7 +55,7 @@ export default function WordCrad(props) {
                     console.log('yeah!')
                     setState({...state, guess:'', completed:true})
                     toggle(false);
-                    setResults("!!!!YEAH!!!!")
+                    setResults("!!!!YEAH YOU DONE!!!!")
                 }else {
                     console.log('reset')
                     setState({...state, guess:'', attempt: state.attempt + 1})
@@ -70,17 +70,15 @@ export default function WordCrad(props) {
         <>
         {results != "" &&(
             <>
-                <div>{results}</div>
-                <div>Time is {count} seconds</div>
-                <button onClick={reset}>RESET</button>
+                <div className="results">{results}</div>
+                <h3 className="time">{count} Second</h3>
             </>
         )}
-                <div>
-                    {state.chars.map((c, i) =><CharacterCard value={c} key={i} activationHandler={activationHandler} attempt={state.attempt}/>)}
-                </div>
-        <h3>
-            {count} Second
-        </h3>
+        <div>
+            {state.chars.map((c, i) =><CharacterCard value={c} key={i} activationHandler={activationHandler} attempt={state.attempt}/>)}
+        </div>
+        <div>Time is {count} seconds</div>
+        <button onClick={reset}>RESET</button>
         </>
     )
 }

@@ -1,12 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
+* {
+  background: skyblue;
+  font-family: 'Itim', cursive;
+  width: 800;
+}
+
+div {
+ text-align: center;
+}
+
 .card {
   display: inline-block;
   text-align: center;
   width: 3em;
   font-size: 2em;
-  box-shadow: 0 4px 8px 0 rgba(218, 157, 157, 0.2);
+  box-shadow: 0 4px 10px 0 rgb(114, 114, 114);
   margin: 1.5em;
   user-select: none;
-  background-color:blueviolet;
+  background-color:rgb(73, 82, 211);
+  border-radius: 5.25px;
  }
 
 .card:hover {
@@ -15,8 +27,8 @@
   text-align: center;
   width: 3em;
   font-size: 2em;
-  box-shadow: 0 4px 8px 0 rgba(218, 157, 157, 0.2);
-  background-color:rgb(49, 10, 86);
+  box-shadow: 0 4px 15px 0 rgb(255, 255, 255);
+  background-color:rgb(50, 61, 209);
 }
 
 .activeCard {
@@ -25,10 +37,46 @@
   border-radius: 25px;
  }
 
-* {
-  background: skyblue;
- }
+ button {
+  margin-top: 20px;
+  background: #fff;
+  color: #111B47;
+  text-decoration: none;
+  border: 2px solid #111B47;
+  border-radius: 2px;
+  padding: 0.5rem 1.5rem;
+}
 
- div {
-  text-align: center;
- }
+button:hover {
+  margin-top: 20px;
+  background: #111B47; 
+  color: #fff;
+  text-decoration: none;
+  border: 2px solid #111B47;
+  border-radius: 2px;
+  padding: 0.5rem 1.5rem;
+  transition: all .5s;
+}
+
+marquee {
+  width: 800px;
+  margin-top: 20px;
+}
+
+.results {
+  color :red;
+  font-size: 80px;
+}
+
+h1 {
+  font-size: 75px;
+}
+
+h1::after {
+  content: "Game";
+  color: #fff;
+  background-color: #111B47;
+  padding-left: 8px;
+  padding-right: 8px;
+  border-radius: 8px;
+}

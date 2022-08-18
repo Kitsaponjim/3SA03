@@ -7,9 +7,12 @@ import WordCrad from './WordCrad';
 const word = "Hello";
 function App() {
   return (
-    <div className='body'>
-      <h1>เกมเรียงคำ</h1>
+    <div>
+      <h1>Word </h1>
       <WordCrad value={word}/>
+      <div>
+        <marquee>Wellcome to WORD GAME</marquee>
+      </div>
     </div>
   );
 }
