@@ -4,11 +4,31 @@
   width: 3em;
   font-size: 2em;
   box-shadow: 0 4px 8px 0 rgba(218, 157, 157, 0.2);
-  margin: 1em;
+  margin: 1.5em;
   user-select: none;
+  background-color:blueviolet;
  }
+
+.card:hover {
+  transition: all .5s;
+  display: inline-block;
+  text-align: center;
+  width: 3em;
+  font-size: 2em;
+  box-shadow: 0 4px 8px 0 rgba(218, 157, 157, 0.2);
+  background-color:rgb(49, 10, 86);
+}
 
 .activeCard {
   color:red;
   background: pink;
+  border-radius: 25px;
+ }
+
+* {
+  background: skyblue;
+ }
+
+ div {
+  text-align: center;
  }
