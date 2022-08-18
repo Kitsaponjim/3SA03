@@ -17,6 +17,7 @@ const prepareStateFromWord = (given_word) => {
 export default function WordCrad(props) {
 
     const [state, setState] = useState(prepareStateFromWord(props.value))
+    const [results, setResults] = useState("")
 
     const activationHandler = c =>{ 
         console.log(`${c} has been activated.`)
@@ -27,17 +28,28 @@ export default function WordCrad(props) {
                 if(guess == state.word){
                     console.log('yeah!')
                     setState({...state, guess:'', completed:true})
+
+                    setResults("!!!!YEAH!!!!")
                 }else {
                     console.log('reset')
                     setState({...state, guess:'', attempt: state.attempt + 1})
+
+                    setResults("Pleace try again")
                 }
             }
         }
     
 
     return (
+        <>
+        {results != "" &&(
+            <>
+                <div>{results}</div>
+            </>
+        )}
         <div>
             {state.chars.map((c, i) =><CharacterCard value={c} key={i} activationHandler={activationHandler} attempt={state.attempt}/>)}
         </div>
+        </>
     )
 }
